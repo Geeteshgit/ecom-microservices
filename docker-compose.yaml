@@ -6,6 +6,15 @@ services:
      - 5000:5000
     volumes:
       - ./user-service:/app
+
+  product-service: 
+    build:
+      context: ./product-service
+    ports: 
+     - 5001:5001
+    volumes:
+      - ./product-service:/app
+
   mongo-db:
     image: mongo:latest
     environment: 
